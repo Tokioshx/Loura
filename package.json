@@ -13,6 +13,7 @@
     "better-sqlite3": "^8.0.1",
     "discord-image-generation": "^1.4.25",
     "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
     "glob": "^7.1.7",
     "moment": "^2.29.4",
     "nekos.life": "^3.0.0",

@@ -15,12 +15,13 @@ const client = new Client({
   ],
   disableMentions: 'everyone'
 });
-module.exports = client;
 
 client.commands = new Collection();
 client.snipes = new Collection();
 client.config = require('./handler/config');
 
 require('./handler')(client);
+require('dotenv').config();
 
-client.login(client.config.token);
+client.login(process.env.token);
+module.exports = client;
