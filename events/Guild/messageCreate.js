@@ -5,10 +5,8 @@ const db = new QuickDB();
 
 client.on(Events.MessageCreate, async (message) => {
   let prefix = await db.get(`prefix_${message.guild.id}`) || client.config.prefix;
-
   if(message.mentions.has(client.user)) {
     if(message.author.bot || !message.guild || message.content.includes('@here') || message.content.includes('@everyone') || message.type == 19 || message.mentions.roles.first()) return;
-
     message.channel.send({
       embeds: [
         new EmbedBuilder()
@@ -17,7 +15,7 @@ client.on(Events.MessageCreate, async (message) => {
       ]
     });
   };
-
+  
   if(message.author.bot || !message.guild || !message.content.toLowerCase().startsWith(prefix)) return;
 
   const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
