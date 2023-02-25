@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Collection, Partials } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, Options, Collection } = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -13,7 +13,11 @@ const client = new Client({
     Partials.Channel,
     Partials.Message,
   ],
-  disableMentions: 'everyone'
+  disableMentions: 'everyone',
+  makeCache: Options.cacheWithLimits({
+    ...Options.DefaultMakeCacheSettings,
+    ReactionManager: 0
+  }),
 });
 
 client.commands = new Collection();
