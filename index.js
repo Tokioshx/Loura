@@ -13,11 +13,11 @@ const client = new Client({
     Partials.Channel,
     Partials.Message,
   ],
-  disableMentions: 'everyone',
   makeCache: Options.cacheWithLimits({
     ...Options.DefaultMakeCacheSettings,
     ReactionManager: 0
   }),
+  disableMentions: 'everyone',
 });
 
 client.commands = new Collection();
