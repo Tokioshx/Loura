@@ -1,0 +1,24 @@
+{
+  "name": "loura",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^8.0.1",
+    "discord-image-generation": "^1.4.25",
+    "discord.js": "^14.7.1",
+    "glob": "^7.1.7",
+    "moment": "^2.29.4",
+    "nekos.life": "^3.0.0",
+    "node-fetch": "^2.6.7",
+    "pretty-ms": "^6.0.0",
+    "quick.db": "^9.0.8",
+    "weather-js": "^2.0.0"
+  }
+}
